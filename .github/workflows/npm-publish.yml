@@ -29,8 +29,10 @@ jobs:
         with:
           name: dist
           path: dist  # or 'build' for CRA
+
+          
           # Copy build into working tree
-          - name: 🚀 Commit and push dist folder to main (or a different branch)
+        - name: 🚀 Commit and push dist folder to main (or a different branch)
   run: |
     git config --global user.name "github-actions[bot]"
     git config --global user.email "github-actions[bot]@users.noreply.github.com"
