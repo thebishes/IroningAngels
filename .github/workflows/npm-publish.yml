@@ -1,5 +1,10 @@
 name: Rollup
-
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:  # ← enables manual run button in the GitHub UI
 jobs:
   build:
     steps:
