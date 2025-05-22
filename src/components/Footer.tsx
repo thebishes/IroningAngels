@@ -100,7 +100,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-200 mt-8 pt-8 text-center">
           <p className="text-gray-500">
-            &copy; {currentYear} Ironing Angels. All rights reserved.
+            &copy; {currentYear} Ironing Angels UK. All rights reserved.
           </p>
         </div>
       </div>

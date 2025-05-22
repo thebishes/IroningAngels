@@ -59,7 +59,7 @@ const ContactPage = () => {
               Get in Touch
             </motion.h1>
             <motion.p
-              className="text-xl text-gray-700"
+              className="text-xl text-gray-200"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -213,7 +213,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg">Phone</h3>
-                      <p className="text-gray-700">(555) 123-4567</p>
+                      <p className="text-gray-700">+44 07901 611906</p>
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -222,7 +222,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg">Email</h3>
-                      <p className="text-gray-700">contact@ironingangels.com</p>
+                      <p className="text-gray-700">contact@ironingangels.co.uk</p>
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -232,8 +232,8 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-medium text-lg">Location</h3>
                       <p className="text-gray-700">
-                        123 Ironing Lane<br />
-                        Laundry City, LC 12345
+                        Topaz Grove<br />
+                        Mansfield, NG18 4XE
                       </p>
                     </div>
                   </li>

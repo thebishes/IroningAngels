@@ -37,19 +37,19 @@ const HomePage = () => {
     {
       quote:
         'Ironing Angels has transformed my weekly routine. No more spending Sundays ironing – now I have time for things I actually enjoy!',
-      author: 'Sarah Miller',
+      author: 'Carl Wagstaff',
       rating: 5,
     },
     {
       quote:
         'As a business professional, presentation is everything. Ironing Angels ensures my shirts are always crisp and perfect.',
-      author: 'James Thompson',
+      author: 'Tony Bish',
       rating: 5,
     },
     {
       quote:
         'I was skeptical at first, but after trying their service for my family\'s laundry, I\'m completely converted. Great value and excellent results.',
-      author: 'Emma Wilson',
+      author: 'Kelly Hall',
       rating: 4,
     },
   ];

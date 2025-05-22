@@ -27,7 +27,10 @@ const Header = ({ scrolled }: HeaderProps) => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <NavLink to="/" className="flex items-center">
             <Shirt className="w-8 h-8 text-primary mr-2" />
-            <span className="font-semibold text-xl">Ironing Angels</span>
+            <span className="font-extrabold text-3xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400 drop-shadow-sm font-poppins">
+  Ironing Angels UK
+</span>
+
           </NavLink>
 
           {/* Desktop Navigation */}

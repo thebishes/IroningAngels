@@ -24,7 +24,7 @@ const Layout = () => {
     <div className="relative">
       <div 
         className="bg-image" 
-        style={{ backgroundImage: 'url(https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=1920)', opacity: 0.8 }}
+        style={{ backgroundImage: 'url(https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=1920)', opacity: 0.3 }}
       />
       <Header scrolled={scrolled} />
       <main className="content-wrapper">
