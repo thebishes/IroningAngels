@@ -1,35 +1,31 @@
-name: Rollup
+name: Build Static Site
+
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  workflow_dispatch:  # ← enables manual run button in the GitHub UI
+    branches:
+      - main  # or whatever your main branch is
+
 jobs:
   build:
+    runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install
-    - run: npm run build --if-present
+      - name: ⬇️ Checkout Repo
+        uses: actions/checkout@v3
 
-    # 👇 Store the dist folder
-    - uses: actions/upload-artifact@v3
-      with:
-        name: app-build
-        path: dist
-
-
-  deploy:
-    needs: [build]
-    steps:
-      # 👇 Get the dist folder
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
+      - name: ⚙️ Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          name: app-build
-      - run: ls dist
+          node-version: 18
+
+      - name: 📦 Install Dependencies
+        run: npm install
+
+      - name: 🏗️ Build Site
+        run: npm run build
+
+      - name: 📤 Upload build folder as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist  # or 'build' for CRA
