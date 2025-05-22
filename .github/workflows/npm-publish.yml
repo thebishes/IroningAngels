@@ -1,27 +1,40 @@
-name: Build Static Site
+name: 🔧 Vite Build
+
 on:
   push:
     branches:
-      - main  # or whatever your main branch is
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: ⬇️ Checkout Repo
+      - name: ⬇️ Checkout repository
         uses: actions/checkout@v4
-      - name: ⚙️ Set up Node.js
+
+      - name: 🔧 Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: 📦 Install Dependencies
+
+      - name: 📦 Install dependencies
         run: npm install
-      - name: 🏗️ Build Site
+
+      - name: 🏗️ Build site with Vite
         run: npm run build
-      - name: 📤 Upload build folder as artifact
+
+      - name: 🧪 Check dist folder
+        run: ls -la dist
+
+      - name: 📤 Upload dist folder
         uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: dist  # or 'build' for CRA
+          path: dist
+
+
+          ##
         - name: 🚀 Commit and push dist folder to main (or a different branch)
   #run:
     git config --global user.name "github-actions[bot]"
