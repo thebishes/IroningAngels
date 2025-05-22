@@ -1,43 +1,32 @@
 name: Build Static Site
-
 on:
   push:
     branches:
       - main  # or whatever your main branch is
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: ⬇️ Checkout Repo
         uses: actions/checkout@v4
-
       - name: ⚙️ Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-
       - name: 📦 Install Dependencies
         run: npm install
-
       - name: 🏗️ Build Site
         run: npm run build
-
       - name: 📤 Upload build folder as artifact
         uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist  # or 'build' for CRA
-
-          
-          # Copy build into working tree
         - name: 🚀 Commit and push dist folder to main (or a different branch)
   run:
     git config --global user.name "github-actions[bot]"
     git config --global user.email "github-actions[bot]@users.noreply.github.com"
     cp -r dist/* .
-
     git add .
     git commit -m "Deploy: update dist folder [CI skip]" || echo "No changes to commit"
     git push origin main
