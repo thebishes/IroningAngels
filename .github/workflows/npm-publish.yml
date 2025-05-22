@@ -23,7 +23,7 @@ jobs:
           name: dist
           path: dist  # or 'build' for CRA
         - name: 🚀 Commit and push dist folder to main (or a different branch)
-  run:
+  #run:
     git config --global user.name "github-actions[bot]"
     git config --global user.email "github-actions[bot]@users.noreply.github.com"
     cp -r dist/* .
