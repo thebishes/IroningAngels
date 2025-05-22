@@ -29,3 +29,11 @@ jobs:
         with:
           name: dist
           path: dist  # or 'build' for CRA
+          # Copy build into working tree
+    cp -r dist/* .
+
+    git add .
+    git commit -m "Deploy: update dist folder [CI skip]" || echo "No changes to commit"
+    git push origin main
+  env:
+    GIT_AUTH_TOKEN: ${{ secrets.GH_PAT }}
