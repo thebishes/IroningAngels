@@ -24,19 +24,16 @@ jobs:
       - name: 🏗️ Build the site
         run: npm run build
 
-      - name: 📤 Commit and push dist folder to main
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+- name: 📤 Commit and push dist folder to main
+  run: |
+    git config --global user.name "github-actions[bot]"
+    git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage the dist folder
-          git add -f dist
+    git add -f dist
+    git commit -m "Build output committed to dist folder [skip ci]" || echo "No changes to commit"
 
-          # Commit if there are changes
-          git diff --cached --quiet || git commit -m "Build output committed to dist folder [skip ci]"
+    git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }} HEAD:main
 
-          # Push back to main branch
-          git push origin main
         env:
           GIT_AUTH_TOKEN: ${{ secrets.GH_PAT }}
 
