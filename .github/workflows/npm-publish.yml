@@ -40,6 +40,6 @@ jobs:
         env:
           GIT_AUTH_TOKEN: ${{ secrets.GH_PAT }}
 
-      # Optional: show what was built token changed TB 
+      # Optional: show what was built token changed TB 2
       - name: 📂 Show dist contents
         run: ls -la dist
