@@ -17,7 +17,7 @@ const HomePage = () => {
       icon: Clock,
       title: 'Quick Turnaround',
       description:
-        'Fast service with same-day and next-day options available to fit your busy schedule.',
+        'Fast service with next-day options available to fit your busy schedule.',
     },
     {
       icon: Award,
@@ -199,7 +199,7 @@ const HomePage = () => {
                     <div>
                       <h4 className="font-medium text-lg mb-1">Schedule Service</h4>
                       <p className="text-gray-600">
-                        Book online, by phone, or through our mobile app.
+                        Book online or by phone.
                       </p>
                     </div>
                   </li>
@@ -210,7 +210,7 @@ const HomePage = () => {
                     <div>
                       <h4 className="font-medium text-lg mb-1">We Collect Your Items</h4>
                       <p className="text-gray-600">
-                        Optional pickup service from your home or office.
+                        Optional pickup service from your home or office within a 10 mile range of NG18. £ Charges apply.
                       </p>
                     </div>
                   </li>

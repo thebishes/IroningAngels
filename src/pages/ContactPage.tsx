@@ -133,7 +133,7 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
-                      placeholder="(+44) 07901 611906"
+                      placeholder="(+44) 07xxx"
                     />
                   </div>
                   
@@ -150,7 +150,7 @@ const ContactPage = () => {
                       required
                     >
                       <option value="regular">Regular Ironing Service</option>
-                      <option value="express">Express Service (24h)</option>
+                      <option value="express">Express Service (48h £ extra)</option>
                       <option value="subscription">Weekly Subscription</option>
                       <option value="special">Special Items</option>
                       <option value="other">Other (Please specify)</option>
@@ -222,7 +222,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg">Email</h3>
-                      <p className="text-gray-700">contact@ironingangels.co.uk</p>
+                      <p className="text-gray-700">contact@ironingangels.uk</p>
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -237,19 +237,7 @@ const ContactPage = () => {
                       </p>
                     </div>
                   </li>
-                  <li className="flex items-start">
-                    <div className="bg-primary/10 p-3 rounded-full mr-4">
-                      <Clock className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-lg">Business Hours</h3>
-                      <div className="text-gray-700">
-                        <p>Monday - Friday: 8am - 6pm</p>
-                        <p>Saturday: 9am - 2pm</p>
-                        <p>Sunday: Closed</p>
-                      </div>
-                    </div>
-                  </li>
+                 
                 </ul>
               </div>
               
@@ -266,7 +254,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-medium text-lg mb-2">What's your turnaround time?</h3>
                     <p className="text-gray-700">
-                      Our standard turnaround is 48 hours, but we also offer same-day and next-day 
+                      Our standard turnaround is 72 hours, but we also offer a next-day 
                       express services for an additional fee.
                     </p>
                   </div>

@@ -47,24 +47,18 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <NavLink
-                  to="/"
-                  className="text-gray-600 hover:text-primary transition-colors"
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/contact"
-                  className="text-gray-600 hover:text-primary transition-colors"
-                >
-                  Contact
-                </NavLink>
-              </li>
+            <h3 className="font-semibold text-lg mb-4">Price Examples</h3>
+            <ul className="space-y-1">
+            <h3 className="font-semibold text-lg mb-4">Adult items&nbsp;&nbsp;&nbsp;&emsp;Kids items</h3>
+            <p className="text-gray-600 mb-4">
+               <span>10 items £10&nbsp;&emsp;40p per item</span><div></div>
+               <span>20 items £18&nbsp;&emsp;75p per uniform item</span><div></div>
+               30 items £25<div></div>
+               Single bed set £3<div> </div>
+               Double bed set £5<div> </div>          
+               King bed set £6<div> </div> 
+                </p>
+             
             </ul>
           </div>
 
@@ -73,7 +67,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Phone className="w-5 h-5 text-primary mr-2 mt-0.5" />
-                <span className="text-gray-600">(+44) 07901611 706</span>
+                <span className="text-gray-600">(+44) 07901 611906</span>
               </li>
               <li className="flex items-start">
                 <Mail className="w-5 h-5 text-primary mr-2 mt-0.5" />
@@ -82,18 +76,11 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-primary mr-2 mt-0.5" />
                 <span className="text-gray-600">
-                  123 Ironing Lane<br />
-                  Laundry City, LC 12345
+                  Topaz Grove<br />
+                  Mansfield, NG18
                 </span>
               </li>
-              <li className="flex items-start">
-                <Clock className="w-5 h-5 text-primary mr-2 mt-0.5" />
-                <span className="text-gray-600">
-                  Mon-Fri: 8am - 6pm<br />
-                  Sat: 9am - 2pm<br />
-                  Sun: Closed
-                </span>
-              </li>
+              
             </ul>
           </div>
         </div>
