@@ -31,7 +31,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/ironing_angels"
                 className="text-gray-500 hover:text-primary transition-colors"
                 aria-label="Instagram"
               >
