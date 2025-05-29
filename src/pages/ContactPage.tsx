@@ -87,7 +87,7 @@ const ContactPage = () => {
                 >
                   <p className="font-medium">Thank you for contacting us!</p>
                   <p>We'll get back to you as soon as possible.</p>
-                </motion.div>
+                </motion.div>):(
               <form 
   action="https://formsubmit.co/contact@ironingangels.uk" 
   method="POST"
