@@ -91,8 +91,7 @@ const ContactPage = () => {
               ) : (
                 <form 
                 action="https://formsubmit.co/contact@ironingangels.uk" 
-                method="POST"
->
+                method="POST"/>
 <input type="hidden" name="_captcha" value="false" />
 <input type="hidden" name="_template" value="table" />
 <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
