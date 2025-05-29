@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import { Shirt, Clock, Package } from 'lucide-react';
+import { Shirt, Baby, Package } from 'lucide-react';
 import Button from '../components/Button';
 
 const PricingPage = () => {
@@ -19,7 +19,7 @@ const PricingPage = () => {
       ],
     },
     {
-      icon: Clock,
+      icon: Baby,
       title: 'Childrens and Bedding',
       price: 'from 50p',
       description: 'Childrens items and bedding service',
