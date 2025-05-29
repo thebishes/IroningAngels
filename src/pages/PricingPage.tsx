@@ -7,14 +7,15 @@ const PricingPage = () => {
   const pricingTiers = [
     {
       icon: Package,
-      title: 'Basic Bundle',
-      price: '£25',
-      description: 'Perfect for individuals with occasional ironing needs',
+      title: 'Adult Clothes',
+      price: 'from £15',
+      description: 'Perfect for adults or teens over 12 years old',
       features: [
-        '30 items per bundle',
+        '10 items £15',
+        '20 items £20',
+        '30 items £30'
         '72-hour turnaround',
-        'Free hangers provided',
-        'Standard delivery',
+        'Pick up and drop off available £',
       ],
     },
     {
