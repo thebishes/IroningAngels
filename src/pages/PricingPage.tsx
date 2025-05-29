@@ -13,7 +13,7 @@ const PricingPage = () => {
       features: [
         '10 items £15',
         '20 items £20',
-        '30 items £30'
+        '30 items £30',
         '72-hour turnaround',
         'Pick up and drop off available £',
       ],
