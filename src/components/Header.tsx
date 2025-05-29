@@ -28,9 +28,8 @@ const Header = ({ scrolled }: HeaderProps) => {
           <NavLink to="/" className="flex items-center">
             <Shirt className="w-8 h-8 text-primary mr-2" />
             <span className="font-extrabold text-3xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400 drop-shadow-sm font-poppins">
-  Ironing Angels UK
-</span>
-
+              Ironing Angels UK
+            </span>
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -46,6 +45,18 @@ const Header = ({ scrolled }: HeaderProps) => {
               }
             >
               Home
+            </NavLink>
+            <NavLink
+              to="/pricing"
+              className={({ isActive }) =>
+                `font-medium transition-colors duration-200 ${
+                  isActive
+                    ? 'text-primary border-b-2 border-primary'
+                    : 'text-gray-700 hover:text-primary'
+                }`
+              }
+            >
+              Pricing
             </NavLink>
             <NavLink
               to="/contact"
@@ -92,6 +103,19 @@ const Header = ({ scrolled }: HeaderProps) => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
+              </NavLink>
+              <NavLink
+                to="/pricing"
+                className={({ isActive }) =>
+                  `px-4 py-2 font-medium ${
+                    isActive
+                      ? 'text-primary bg-blue-50'
+                      : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                  }`
+                }
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
               </NavLink>
               <NavLink
                 to="/contact"
