@@ -124,7 +124,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
-                      placeholder="contact@ironingangels.uk"
+                      placeholder="your email@domain.com"
                       required
                     />
                   </div>
