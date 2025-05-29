@@ -46,21 +46,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Price Examples</h3>
-            <ul className="space-y-1">
-            <h3 className="font-semibold text-lg mb-4">Adult items&nbsp;&nbsp;&nbsp;&emsp;Kids items</h3>
-            <p className="text-gray-600 mb-4">
-               <span>10 items £10&nbsp;&emsp;40p per item</span><div></div>
-               <span>20 items £18&nbsp;&emsp;75p per uniform item</span><div></div>
-               30 items £25<div></div>
-               Single bed set £3<div> </div>
-               Double bed set £5<div> </div>          
-               King bed set £6<div> </div> 
-                </p>
-             
-            </ul>
-          </div>
+          
 
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
