@@ -89,7 +89,14 @@ const ContactPage = () => {
                   <p>We'll get back to you as soon as possible.</p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit}>
+                <form 
+                action="https://formsubmit.co/contact@ironingangels.uk" 
+                method="POST"
+>
+<input type="hidden" name="_captcha" value="false" />
+<input type="hidden" name="_template" value="table" />
+<input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+
                   <div className="mb-4">
                     <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
                       Name
