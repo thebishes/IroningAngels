@@ -37,7 +37,7 @@ const PricingPage = () => {
       price: '£80/month',
       description: 'Best value for families and regular customers',
       features: [
-        'Up to 100 items monthly',
+        'Up to 100 items monthly (average 25 weekly',
         '48-hour turnaround',
         'Collection & Delivery within 5 miles of NG18',
         'Priority booking slots',
