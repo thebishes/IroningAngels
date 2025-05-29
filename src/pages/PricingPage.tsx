@@ -39,9 +39,9 @@ const PricingPage = () => {
       features: [
         'Up to 100 items monthly',
         '48-hour turnaround',
-        'Free collection & delivery',
+        'Collection & Delivery within 5 miles of NG18',
         'Priority booking slots',
-        'Loyalty rewards',
+        'Minimum 3 month term',
       ],
     },
   ];
