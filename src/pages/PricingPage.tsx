@@ -20,15 +20,15 @@ const PricingPage = () => {
     },
     {
       icon: Clock,
-      title: 'Express Service',
-      price: '£35',
-      description: 'Ideal for urgent requirements and business professionals',
+      title: 'Childrens and Bedding',
+      price: 'from 50p',
+      description: 'Childrens items and bedding service',
       features: [
-        '20 items per bundle',
-        '24-hour turnaround',
-        'Free hangers provided',
-        'Priority delivery',
-        'SMS notifications',
+        '50p per child item',
+        '75p per child school uniform',
+        'Single bed set £3',
+        'Double bed set £5',
+        'King bed set £6',
       ],
     },
     {
