@@ -67,7 +67,7 @@ const ContactPage = () => {
                 </motion.div>
               ) : (
                 <form 
-                  action="https://formsubmit.co/thebishes@gmail.com" 
+                  action="https://formsubmit.co/iron+thebishes@gmail.com" 
                   method="POST"
                   onSubmit={() => setIsSubmitted(true)}
                 >
