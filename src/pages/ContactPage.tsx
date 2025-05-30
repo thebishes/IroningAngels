@@ -72,7 +72,6 @@ const ContactPage = () => {
                   onSubmit={() => setIsSubmitted(true)}
                 >
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_next" value="https://superlative-pegasus-7e7037.netlify.app/contact" />
 
                   <div className="mb-4">
