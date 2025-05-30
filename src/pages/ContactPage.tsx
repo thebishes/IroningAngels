@@ -89,7 +89,7 @@ const ContactPage = () => {
                   <p>We'll get back to you as soon as possible.</p>
                 </motion.div>):(
               <form 
-  action="https://formsubmit.co/thebishes@gmail.com" 
+  action="https://formsubmit.co/dd34f598e53aecbfc8039addb0f19f25" 
   method="POST">
 <input type="hidden" name="_captcha" value="false" />
 <input type="hidden" name="_template" value="table" />
