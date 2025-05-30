@@ -22,29 +22,6 @@ const ContactPage = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        service: 'regular',
-      });
-      
-      // Reset submission status after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
-  };
-
   return (
     <div className="pt-16 md:pt-20">
       <section className="py-16 md:py-24">
@@ -59,7 +36,7 @@ const ContactPage = () => {
               Get in Touch
             </motion.h1>
             <motion.p
-              className="text-xl text-gray-200"
+              className="text-xl text-gray-700"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -87,13 +64,16 @@ const ContactPage = () => {
                 >
                   <p className="font-medium">Thank you for contacting us!</p>
                   <p>We'll get back to you as soon as possible.</p>
-                </motion.div>):(
-              <form 
-  action="https://formsubmit.co/thebishes@gmail.com" 
-  method="POST">
-<input type="hidden" name="_captcha" value="false" />
-<input type="hidden" name="_template" value="table" />
-<input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+                </motion.div>
+              ) : (
+                <form 
+                  action="https://formsubmit.co/thebishes@gmail.com" 
+                  method="POST"
+                  onSubmit={() => setIsSubmitted(true)}
+                >
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_next" value="https://superlative-pegasus-7e7037.netlify.app/contact" />
 
                   <div className="mb-4">
                     <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -122,7 +102,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
-                      placeholder="your email@domain.com"
+                      placeholder="your.email@example.com"
                       required
                     />
                   </div>
@@ -138,7 +118,7 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
-                      placeholder="(+44) 07xxx"
+                      placeholder="(+44) 07901 611906"
                     />
                   </div>
                   
@@ -155,7 +135,7 @@ const ContactPage = () => {
                       required
                     >
                       <option value="regular">Regular Ironing Service</option>
-                      <option value="express">Express Service (48h £ extra)</option>
+                      <option value="express">Express Service (24h)</option>
                       <option value="subscription">Weekly Subscription</option>
                       <option value="special">Special Items</option>
                       <option value="other">Other (Please specify)</option>
@@ -179,12 +159,12 @@ const ContactPage = () => {
                   </div>
                   
                   <Button type="submit" variant="primary" className="w-full">
-    <span className="flex items-center justify-center">
-      <Send className="w-5 h-5 mr-2" />
-      Send Message
-    </span>
-  </Button>
-</form>
+                    <span className="flex items-center justify-center">
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </span>
+                  </Button>
+                </form>
               )}
             </motion.div>
             
@@ -227,7 +207,19 @@ const ContactPage = () => {
                       </p>
                     </div>
                   </li>
-                 
+                  <li className="flex items-start">
+                    <div className="bg-primary/10 p-3 rounded-full mr-4">
+                      <Clock className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-lg">Business Hours</h3>
+                      <div className="text-gray-700">
+                        <p>Monday - Friday: 8am - 6pm</p>
+                        <p>Saturday: 9am - 2pm</p>
+                        <p>Sunday: Closed</p>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
               
@@ -244,7 +236,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-medium text-lg mb-2">What's your turnaround time?</h3>
                     <p className="text-gray-700">
-                      Our standard turnaround is 72 hours, but we also offer a next-day 
+                      Our standard turnaround is 48 hours, but we also offer same-day and next-day 
                       express services for an additional fee.
                     </p>
                   </div>
