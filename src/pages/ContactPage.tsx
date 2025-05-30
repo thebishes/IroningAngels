@@ -67,12 +67,14 @@ const ContactPage = () => {
                 </motion.div>
               ) : (
                 <form 
-                  action="https://formsubmit.co/thebishes@gmail.com" 
+                  action="https://formsubmit.co/contact@ironingangels.uk"
                   method="POST"
                   onSubmit={() => setIsSubmitted(true)}
                 >
+                  <input type="hidden" name="_next" value="https://ironingangels.uk/contact" />
+                  <input type="hidden" name="_subject" value="New Contact Form Submission" />
+                  <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="https://superlative-pegasus-7e7037.netlify.app/contact" />
 
                   <div className="mb-4">
                     <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
