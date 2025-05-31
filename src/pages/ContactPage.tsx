@@ -179,10 +179,10 @@ const ContactPage = () => {
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
                       required
                     >
-                      <option value="regular">Regular Ironing Service</option>
-                      <option value="express">Express Service (24h)</option>
+                      <option value="adults">Adult Clothes</option>
+                      <option value="childrens">Childrens Clothes</option>
                       <option value="subscription">Weekly Subscription</option>
-                      <option value="special">Special Items</option>
+                      <option value="bedding">Bedding</option>
                       <option value="other">Other (Please specify)</option>
                     </select>
                   </div>
