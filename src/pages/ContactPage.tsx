@@ -268,8 +268,6 @@ const ContactPage = () => {
                     <div className="bg-primary/10 p-3 rounded-full mr-4">
                       <Clock className="w-6 h-6 text-primary" />
                     </div>
-                    
-                    </div>
                   </li>
                 </ul>
               </div>
