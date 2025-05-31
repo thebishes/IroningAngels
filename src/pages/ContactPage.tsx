@@ -268,13 +268,7 @@ const ContactPage = () => {
                     <div className="bg-primary/10 p-3 rounded-full mr-4">
                       <Clock className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-medium text-lg">Business Hours</h3>
-                      <div className="text-gray-700">
-                        <p>Monday - Friday: 8am - 6pm</p>
-                        <p>Saturday: 9am - 2pm</p>
-                        <p>Sunday: Closed</p>
-                      </div>
+                    
                     </div>
                   </li>
                 </ul>
