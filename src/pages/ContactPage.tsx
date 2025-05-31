@@ -1,40 +1,4 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Send, Mail, Phone, MapPin, Clock } from 'lucide-react';
-import Button from '../components/Button';
-
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    service: 'regular',
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  return (
-    <div className="pt-16 md:pt-20">
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center mb-12">
-            <motion.h1
-              className="mb-6"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Get in Touch
-            </motion.h1>
+       </motion.h1>
             <motion.p
               className="text-xl text-gray-700"
               initial={{ opacity: 0 }}
