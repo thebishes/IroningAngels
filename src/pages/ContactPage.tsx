@@ -1,4 +1,93 @@
-       </motion.h1>
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Send, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { useMutation } from '@tanstack/react-query';
+import Button from '../components/Button';
+
+interface ContactFormValues {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  service: string;
+}
+
+const ContactPage = () => {
+  const [formData, setFormData] = useState<ContactFormValues>({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    service: 'regular',
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: ContactFormValues) => {
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("phone", data.phone);
+      formData.append("service", data.service);
+      formData.append("message", data.message);
+      formData.append("_captcha", "false");
+      formData.append("_next", "https://ironingangels.uk/contact");
+
+      const response = await fetch(
+        "https://formsubmit.co/dd34f598e53aecbfc8039addb0f19f25",
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      return response;
+    },
+    onSuccess: () => {
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        service: 'regular',
+      });
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    },
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await contactMutation.mutateAsync(formData);
+  };
+
+  return (
+    <div className="pt-16 md:pt-20">
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <motion.h1
+              className="mb-6"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Get in Touch
+            </motion.h1>
             <motion.p
               className="text-xl text-gray-700"
               initial={{ opacity: 0 }}
@@ -30,16 +119,7 @@
                   <p>We'll get back to you as soon as possible.</p>
                 </motion.div>
               ) : (
-                <form 
-                  action="https://formsubmit.co/thebishes@gmail.com"
-                  method="POST"
-                  onSubmit={() => setIsSubmitted(true)}
-                >
-                  <input type="hidden" name="_next" value="https://ironingangels.uk/contact" />
-                  <input type="hidden" name="_subject" value="New Contact Form Submission" />
-                  <input type="hidden" name="_template" value="table" />
-                  <input type="hidden" name="_captcha" value="false" />
-
+                <form onSubmit={handleSubmit}>
                   <div className="mb-4">
                     <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
                       Name
@@ -125,8 +205,20 @@
                   
                   <Button type="submit" variant="primary" className="w-full">
                     <span className="flex items-center justify-center">
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                      {contactMutation.isPending ? (
+                        <>
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5 mr-2" />
+                          Send Message
+                        </>
+                      )}
                     </span>
                   </Button>
                 </form>
