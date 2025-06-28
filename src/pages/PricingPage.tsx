@@ -121,7 +121,7 @@ const PricingPage = () => {
 
           <div className="mt-16 text-center">
             <p className="text-gray-600 mb-8">
-              Need a custom plan? Contact us for personalized pricing tailored to your needs.
+              Need a custom plan? Contact us for personalised pricing tailored to your needs.
             </p>
             <NavLink to="/contact">
               <Button variant="accent">Contact Us</Button>
