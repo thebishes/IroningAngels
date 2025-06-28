@@ -26,10 +26,11 @@ const PricingPage = () => {
       description: 'Childrens items and bedding service',
       features: [
         '50p per child item',
-        '75p per child school uniform',
+        '75p per item school uniform',
         'Single bed set £3',
         'Double bed set £5',
-        'King bed set £6',
+        'King bed set £8',
+        'Super King bed set £9'
       ],
     },
     {
