@@ -34,7 +34,7 @@ const PricingPage = () => {
     },
     {
       icon: Shirt,
-      title: 'Weekly Subscription',
+      title: 'Monthly Subscription',
       price: '£80/month',
       description: 'Best value for families and regular customers',
       features: [
