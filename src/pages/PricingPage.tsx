@@ -15,7 +15,7 @@ const PricingPage = () => {
         '20 items £20',
         '30 items £30',
         '30 items + @ 90p per item',
-        'Work shirts and work attire £1.75 per itemn',
+        'Work shirts and work attire £1.75 per item',
         'Pick up and drop off available £',
       ],
     },
@@ -44,6 +44,7 @@ const PricingPage = () => {
         'Collection & Delivery within 5 miles of NG18',
         'Priority booking slots',
         'Minimum 3 month term',
+        'Pick up and drop off available £',
       ],
     },
   ];
