@@ -56,7 +56,7 @@ const Header = ({ scrolled }: HeaderProps) => {
                 }`
               }
             >
-              Pricing  
+              Pricing2  
             </NavLink>
             <NavLink
               to="/contact"
