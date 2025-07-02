@@ -111,9 +111,9 @@ const PricingCalculator = ({ isOpen, onClose }: CalculatorProps) => {
             onClick={onClose}
           />
           
-          {/* Calculator Modal */}
+          {/* Calculator Modal - Made Much Wider */}
           <motion.div
-            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
+            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -140,47 +140,47 @@ const PricingCalculator = ({ isOpen, onClose }: CalculatorProps) => {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col lg:flex-row h-full max-h-[calc(90vh-120px)]">
-              {/* Items List */}
-              <div className="flex-1 p-6 overflow-y-auto">
-                <div className="space-y-6">
+            <div className="flex flex-col xl:flex-row h-full max-h-[calc(90vh-120px)]">
+              {/* Items List - Wider with better spacing */}
+              <div className="flex-1 p-8 overflow-y-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {Object.entries(groupedItems).map(([category, items]) => (
-                    <div key={category} className={`rounded-xl border-2 p-4 ${getCategoryColor(category)}`}>
-                      <h3 className="text-lg font-semibold mb-4 text-gray-800">
+                    <div key={category} className={`rounded-xl border-2 p-6 ${getCategoryColor(category)}`}>
+                      <h3 className="text-xl font-semibold mb-6 text-gray-800">
                         {getCategoryTitle(category)}
                       </h3>
-                      <div className="space-y-3">
+                      <div className="space-y-4">
                         {items.map((item) => (
                           <div
                             key={item.id}
-                            className="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm"
+                            className="flex items-center justify-between bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
                           >
-                            <div className="flex-1">
-                              <div className="font-medium text-gray-900">{item.name}</div>
-                              <div className="text-sm text-gray-600">
+                            <div className="flex-1 pr-4">
+                              <div className="font-medium text-gray-900 text-lg">{item.name}</div>
+                              <div className="text-sm text-gray-600 mt-1">
                                 £{item.price.toFixed(2)} per {item.unit}
                               </div>
                             </div>
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center space-x-4">
                               <button
                                 onClick={() => updateQuantity(item.id, -1)}
-                                className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                                className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors disabled:opacity-50"
                                 disabled={!quantities[item.id]}
                               >
-                                <Minus className="w-4 h-4" />
+                                <Minus className="w-5 h-5" />
                               </button>
                               <input
                                 type="number"
                                 min="0"
                                 value={quantities[item.id] || 0}
                                 onChange={(e) => setQuantity(item.id, parseInt(e.target.value) || 0)}
-                                className="w-16 text-center border border-gray-300 rounded-md py-1 focus:ring-2 focus:ring-primary focus:border-primary"
+                                className="w-20 text-center border border-gray-300 rounded-md py-2 text-lg focus:ring-2 focus:ring-primary focus:border-primary"
                               />
                               <button
                                 onClick={() => updateQuantity(item.id, 1)}
-                                className="w-8 h-8 rounded-full bg-primary hover:bg-primary-light text-white flex items-center justify-center transition-colors"
+                                className="w-10 h-10 rounded-full bg-primary hover:bg-primary-light text-white flex items-center justify-center transition-colors"
                               >
-                                <Plus className="w-4 h-4" />
+                                <Plus className="w-5 h-5" />
                               </button>
                             </div>
                           </div>
@@ -191,27 +191,27 @@ const PricingCalculator = ({ isOpen, onClose }: CalculatorProps) => {
                 </div>
               </div>
 
-              {/* Summary Panel */}
-              <div className="lg:w-80 bg-gray-50 border-l border-gray-200 p-6">
+              {/* Summary Panel - Wider */}
+              <div className="xl:w-96 bg-gray-50 border-l border-gray-200 p-8">
                 <div className="sticky top-0">
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">Order Summary</h3>
+                  <h3 className="text-2xl font-semibold mb-6 text-gray-900">Order Summary</h3>
                   
                   {hasItems ? (
-                    <div className="space-y-3 mb-6">
+                    <div className="space-y-4 mb-8">
                       {pricingItems
                         .filter(item => quantities[item.id] > 0)
                         .map(item => {
                           const quantity = quantities[item.id];
                           const itemTotal = quantity * item.price;
                           return (
-                            <div key={item.id} className="flex justify-between text-sm">
-                              <div className="flex-1">
-                                <div className="font-medium">{item.name}</div>
-                                <div className="text-gray-600">
+                            <div key={item.id} className="flex justify-between py-2 border-b border-gray-200">
+                              <div className="flex-1 pr-4">
+                                <div className="font-medium text-base">{item.name}</div>
+                                <div className="text-gray-600 text-sm">
                                   {quantity} × £{item.price.toFixed(2)}
                                 </div>
                               </div>
-                              <div className="font-medium">
+                              <div className="font-medium text-lg">
                                 £{itemTotal.toFixed(2)}
                               </div>
                             </div>
@@ -219,30 +219,30 @@ const PricingCalculator = ({ isOpen, onClose }: CalculatorProps) => {
                         })}
                     </div>
                   ) : (
-                    <div className="text-center py-8 text-gray-500">
-                      <Calculator className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                      <p>Add items to see your estimate</p>
+                    <div className="text-center py-12 text-gray-500">
+                      <Calculator className="w-16 h-16 mx-auto mb-4 opacity-50" />
+                      <p className="text-lg">Add items to see your estimate</p>
                     </div>
                   )}
 
-                  <div className="border-t border-gray-300 pt-4">
-                    <div className="flex justify-between items-center text-xl font-bold">
+                  <div className="border-t-2 border-gray-300 pt-6">
+                    <div className="flex justify-between items-center text-2xl font-bold">
                       <span>Total Estimate:</span>
                       <span className="text-primary">£{total.toFixed(2)}</span>
                     </div>
-                    <p className="text-xs text-gray-600 mt-2">
+                    <p className="text-sm text-gray-600 mt-2">
                       * Prices exclude pickup/delivery charges
                     </p>
                   </div>
 
                   {hasItems && (
-                    <div className="mt-6 space-y-3">
-                      <Button variant="primary" className="w-full">
+                    <div className="mt-8 space-y-4">
+                      <Button variant="primary" className="w-full text-lg py-3">
                         Get Quote
                       </Button>
                       <Button 
                         variant="secondary" 
-                        className="w-full"
+                        className="w-full text-lg py-3"
                         onClick={() => setQuantities({})}
                       >
                         Clear All
@@ -250,9 +250,9 @@ const PricingCalculator = ({ isOpen, onClose }: CalculatorProps) => {
                     </div>
                   )}
 
-                  <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                    <h4 className="font-medium text-blue-900 mb-2">Need Help?</h4>
-                    <p className="text-sm text-blue-700">
+                  <div className="mt-8 p-6 bg-blue-50 rounded-lg">
+                    <h4 className="font-medium text-blue-900 mb-3 text-lg">Need Help?</h4>
+                    <p className="text-sm text-blue-700 leading-relaxed">
                       This calculator provides estimates. Contact us for exact pricing and to discuss your specific needs.
                     </p>
                   </div>
