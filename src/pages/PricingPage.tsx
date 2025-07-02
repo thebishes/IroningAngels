@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import { Shirt, Baby, Package } from 'lucide-react';
+import { Shirt, Baby, Package, Calculator } from 'lucide-react';
 import Button from '../components/Button';
+import PricingCalculator from '../components/PricingCalculator';
 
 const PricingPage = () => {
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+
   const pricingTiers = [
     {
       icon: Package,
@@ -126,12 +130,27 @@ const PricingPage = () => {
             <p className="text-gray-600 mb-8">
               Need a custom plan? Contact us for personalised pricing tailored to your needs.
             </p>
-            <NavLink to="/contact">
-              <Button variant="accent">Contact Us</Button>
-            </NavLink>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <NavLink to="/contact">
+                <Button variant="accent">Contact Us</Button>
+              </NavLink>
+              <Button 
+                variant="primary" 
+                onClick={() => setIsCalculatorOpen(true)}
+                className="flex items-center"
+              >
+                <Calculator className="w-5 h-5 mr-2" />
+                Calculator
+              </Button>
+            </div>
           </div>
         </div>
       </section>
+
+      <PricingCalculator 
+        isOpen={isCalculatorOpen} 
+        onClose={() => setIsCalculatorOpen(false)} 
+      />
     </div>
   );
 };
