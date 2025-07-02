@@ -35,7 +35,8 @@ const PricingPage = () => {
         'Single bed set £3',
         'Double bed set £5',
         'King bed set £8',
-        'Super King bed set £9'
+        'Super King bed set £9',
+         'Pick up and drop off available £',
       ],
     },
     {
