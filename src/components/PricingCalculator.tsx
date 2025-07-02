@@ -7,7 +7,7 @@ interface PricingItem {
   id: string;
   name: string;
   price: number;
-  category: 'adult' | 'children' | 'bedding' | 'work';
+  category: 'adult' | 'children' | 'bedding' | 'delicate';
   unit: string;
 }
 
@@ -26,9 +26,9 @@ const PricingCalculator = ({ isOpen, onClose }: CalculatorProps) => {
     { id: 'adult-30', name: 'Adult Items (30 pieces)', price: 30, category: 'adult', unit: 'bundle' },
     { id: 'adult-extra', name: 'Adult Items (30+ each extra)', price: 0.9, category: 'adult', unit: 'item' },
     
-    // Work Items
-    { id: 'work-shirt', name: 'Work Shirts', price: 1.75, category: 'work', unit: 'item' },
-    { id: 'work-dress', name: 'Work Dresses', price: 1.75, category: 'work', unit: 'item' },
+    // Delicate Items
+    { id: 'work-shirt', name: 'Work Shirts', price: 1.75, category: 'delicate', unit: 'item' },
+    { id: 'evening-dress', name: 'Evening Dresses', price: 1.75, category: 'delicate', unit: 'item' },
     
     // Children's Items
     { id: 'child-item', name: 'Children\'s Items', price: 0.5, category: 'children', unit: 'item' },
@@ -65,7 +65,7 @@ const PricingCalculator = ({ isOpen, onClose }: CalculatorProps) => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'adult': return 'bg-blue-50 border-blue-200';
-      case 'work': return 'bg-purple-50 border-purple-200';
+      case 'delicate': return 'bg-purple-50 border-purple-200';
       case 'children': return 'bg-green-50 border-green-200';
       case 'bedding': return 'bg-orange-50 border-orange-200';
       default: return 'bg-gray-50 border-gray-200';
@@ -75,7 +75,7 @@ const PricingCalculator = ({ isOpen, onClose }: CalculatorProps) => {
   const getCategoryTitle = (category: string) => {
     switch (category) {
       case 'adult': return 'Adult Clothing';
-      case 'work': return 'Work Attire';
+      case 'delicate': return 'Delicate Items';
       case 'children': return 'Children\'s Items';
       case 'bedding': return 'Bedding';
       default: return '';

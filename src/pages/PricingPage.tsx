@@ -19,7 +19,7 @@ const PricingPage = () => {
         '20 items £20',
         '30 items £30',
         '30 items + @ 90p per item',
-        'Work shirts / dresses £1.75 per item',
+        'Delicate items £1.75 per item',
         'Pick up and drop off available £',
       ],
     },
