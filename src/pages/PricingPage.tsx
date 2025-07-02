@@ -51,7 +51,7 @@ const PricingPage = () => {
         'Priority booking slots',
         'Minimum 3 month term',
         'Extra pick up and drop off available £',
-        ' Normla rates apply for other item styles',
+        'Normal rates apply for other item styles',
       ],
     },
   ];
