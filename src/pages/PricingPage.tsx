@@ -45,12 +45,13 @@ const PricingPage = () => {
       price: '£80/month',
       description: 'Best value for families and regular customers',
       features: [
-        '100 items monthly (average 25 weekly)',
+        '100 regular items (average 25 weekly)',
         '48-hour turnaround',
-        'Collection & Delivery within 5 miles of NG18',
+        '1 x Collection & Delivery within 5 miles of NG18',
         'Priority booking slots',
         'Minimum 3 month term',
-        'Pick up and drop off available £',
+        'Extra pick up and drop off available £',
+        ' Normla rates apply for other item styles',
       ],
     },
   ];
