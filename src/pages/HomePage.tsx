@@ -36,14 +36,14 @@ const HomePage = () => {
   const testimonials = [
     {
       quote:
-        'Ironing Angels has transformed my weekly routine. No more spending Sundays ironing – now I have time for things I actually enjoy!',
-      author: 'Carl Wagstaff',
+        'Ironing Angels are amazing, efficient and now my regular agency',
+      author: 'Karen',
       rating: 5,
     },
     {
       quote:
-        'As a business professional, presentation is everything. Ironing Angels ensures my shirts are always crisp and perfect.',
-      author: 'Tony Bish',
+        'Amazing prompt service',
+      author: 'Helen and Jeff',
       rating: 5,
     },
     {
