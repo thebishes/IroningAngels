@@ -199,7 +199,7 @@ const HomePage = () => {
                     <div>
                       <h4 className="font-medium text-lg mb-1">Schedule Service</h4>
                       <p className="text-gray-600">
-                        Book online or by phone.
+                        Book by text or by phone.
                       </p>
                     </div>
                   </li>
