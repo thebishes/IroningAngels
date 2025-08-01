@@ -29,7 +29,7 @@ const HomePage = () => {
       icon: Sparkles,
       title: 'Special Care',
       description:
-        'Specialized treatment for delicate fabrics, formal wear, and difficult-to-iron items.',
+        'Specialised treatment for delicate fabrics, formal wear, and difficult-to-iron items.',
     },
   ];
 
