@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import CookieConsent from './CookieConsent';
 
 const Layout = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,6 +32,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
