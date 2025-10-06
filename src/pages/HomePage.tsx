@@ -61,7 +61,7 @@ const HomePage = () => {
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <motion.h1
-              className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900"
+              className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-2"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
