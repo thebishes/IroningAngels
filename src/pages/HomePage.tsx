@@ -111,8 +111,8 @@ const HomePage = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              We offer a range of professional ironing services to meet your needs,
-              with options for pickup and delivery to make your life easier.
+              We offer a range of affordable ironing services to meet your needs,
+              with options for pickup and delivery to make your life even easier.
             </motion.p>
           </div>
 
