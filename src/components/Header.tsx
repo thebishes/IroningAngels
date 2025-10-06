@@ -23,7 +23,7 @@ const Header = ({ scrolled }: HeaderProps) => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pt-2">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex flex-col">
             <NavLink to="/" className="flex items-center">
