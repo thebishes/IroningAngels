@@ -39,7 +39,7 @@ const Header = ({ scrolled }: HeaderProps) => {
               className="flex items-center gap-2 text-primary hover:text-pink-600 font-semibold transition-colors duration-200"
             >
               <Phone size={18} />
-              <span>07123 456789</span>
+              <span>07901 611906</span>
             </a>
             <NavLink
               to="/"
