@@ -114,6 +114,15 @@ const HomePage = () => {
               We offer a range of affordable ironing services to meet your needs,
               with options for pickup and delivery to make your life even easier.
             </motion.p>
+            <motion.p
+              className="text-center text-gray-700 mb-12 max-w-2xl mx-auto text-lg"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              Example pricing: Adults £1, Kids £0.50p, Shirts £1.75
+            </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
