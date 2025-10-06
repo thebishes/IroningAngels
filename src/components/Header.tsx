@@ -25,22 +25,24 @@ const Header = ({ scrolled }: HeaderProps) => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <NavLink to="/" className="flex items-center">
-            <Shirt className="w-8 h-8 text-primary mr-2" />
-            <span className="font-extrabold text-3xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400 drop-shadow-sm font-poppins">
-              Ironing Angels UK
-            </span>
-          </NavLink>
+          <div className="flex flex-col">
+            <NavLink to="/" className="flex items-center">
+              <Shirt className="w-8 h-8 text-primary mr-2" />
+              <span className="font-extrabold text-3xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400 drop-shadow-sm font-poppins">
+                Ironing Angels UK
+              </span>
+            </NavLink>
+            <a
+              href="tel:+447901611906"
+              className="flex items-center gap-2 text-primary hover:text-pink-600 font-semibold transition-colors duration-200 ml-10 mt-1"
+            >
+              <Phone size={16} />
+              <span className="text-sm">07901 611906</span>
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="tel:+447123456789"
-              className="flex items-center gap-2 text-primary hover:text-pink-600 font-semibold transition-colors duration-200"
-            >
-              <Phone size={18} />
-              <span>07901 611906</span>
-            </a>
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -79,22 +81,14 @@ const Header = ({ scrolled }: HeaderProps) => {
             </NavLink>
           </nav>
 
-          {/* Mobile Phone and Menu */}
-          <div className="md:hidden flex items-center gap-4">
-            <a
-              href="tel:+447123456789"
-              className="flex items-center text-primary hover:text-pink-600"
-            >
-              <Phone size={20} />
-            </a>
-            <button
-              className="text-gray-700 focus:outline-none"
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-gray-700 focus:outline-none"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
