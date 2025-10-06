@@ -66,7 +66,7 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Perfect Pressed Clothes, <span className="text-primary">Every Time</span>
+              Crease Free Clothes, <span className="text-primary">Every Time</span>
             </motion.h1>
             <motion.p
               className="mb-8 text-xl text-gray-700"
