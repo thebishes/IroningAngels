@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Shirt } from 'lucide-react';
+import { Menu, X, Shirt, Phone } from 'lucide-react';
 
 interface HeaderProps {
   scrolled: boolean;
@@ -33,7 +33,14 @@ const Header = ({ scrolled }: HeaderProps) => {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
+            <a
+              href="tel:+447123456789"
+              className="flex items-center gap-2 text-primary hover:text-pink-600 font-semibold transition-colors duration-200"
+            >
+              <Phone size={18} />
+              <span>07123 456789</span>
+            </a>
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -72,14 +79,22 @@ const Header = ({ scrolled }: HeaderProps) => {
             </NavLink>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-700 focus:outline-none"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Phone and Menu */}
+          <div className="md:hidden flex items-center gap-4">
+            <a
+              href="tel:+447123456789"
+              className="flex items-center text-primary hover:text-pink-600"
+            >
+              <Phone size={20} />
+            </a>
+            <button
+              className="text-gray-700 focus:outline-none"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
