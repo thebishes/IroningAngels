@@ -23,10 +23,10 @@ const Header = ({ scrolled }: HeaderProps) => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 pt-2">
+      <div className="container mx-auto px-4 pt-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex flex-col">
-            <NavLink to="/" className="flex items-center">
+            <NavLink to="/" className="flex items-center mt-2">
               <Shirt className="w-8 h-8 text-primary mr-2" />
               <span className="font-extrabold text-3xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400 drop-shadow-sm font-poppins">
                 Ironing Angels UK
@@ -34,7 +34,7 @@ const Header = ({ scrolled }: HeaderProps) => {
             </NavLink>
             <a
               href="tel:+447901611906"
-              className="flex items-center gap-2 text-primary hover:text-pink-600 font-semibold transition-colors duration-200 ml-10 mt-1"
+              className="flex items-center gap-2 text-primary hover:text-pink-600 font-semibold transition-colors duration-200 ml-10 mt-3"
             >
               <Phone size={16} />
               <span className="text-sm">07901 611906</span>
