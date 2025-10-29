@@ -12,13 +12,10 @@ const PricingPage = () => {
     {
       icon: Package,
       title: 'Adult Clothes',
-      price: 'from £15',
+      price: 'from £1 per item',
       description: 'Perfect for adults or teens over 12 years old',
       features: [
-        '10 items £15',
-        '20 items £20',
-        '30 items £30',
-        '30 items + @ 90p per item',
+        'Standard items from £1 per item',
         'Delicate items £1.75 per item',
         'Work shirts / uniforms £1.75 per item',
         'Pick up and drop off available £',
