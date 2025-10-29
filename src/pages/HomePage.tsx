@@ -114,7 +114,7 @@ const HomePage = () => {
               with options for pickup and delivery to make your life even easier.
             </motion.p>
             <motion.p
-              className="text-center text-gray-700 mb-12 max-w-2xl mx-auto text-lg"
+              className="text-center text-gray-700 mb-12 max-w-2xl mx-auto text-lg font-bold"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
