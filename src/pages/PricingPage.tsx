@@ -36,21 +36,6 @@ const PricingPage = () => {
          'Pick up and drop off available £',
       ],
     },
-    {
-      icon: Shirt,
-      title: 'Monthly Subscription',
-      price: '£80/month',
-      description: 'Best value for families and regular customers',
-      features: [
-        '100 regular items (average 25 weekly)',
-        '48-hour turnaround',
-        '1 x Collection & Delivery within 5 miles of NG18',
-        'Priority booking slots',
-        'Minimum 3 month term',
-        'Extra pick up and drop off available £',
-        'Normal rates apply for other item styles',
-      ],
-    },
   ];
 
   return (
@@ -76,7 +61,7 @@ const PricingPage = () => {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
