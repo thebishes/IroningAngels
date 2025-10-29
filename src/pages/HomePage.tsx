@@ -85,7 +85,6 @@ const HomePage = () => {
               <NavLink to="/contact">
                 <Button variant="primary">Get a Quote</Button>
               </NavLink>
-              <Button variant="secondary">Learn More</Button>
             </motion.div>
           </div>
         </div>
