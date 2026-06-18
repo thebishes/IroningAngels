@@ -49,8 +49,8 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-primary mr-2 mt-0.5" />
                 <span className="text-gray-600">
-                  Topaz Grove<br />
-                  Mansfield, NG18
+                  Little Hollies<br />
+                  Forest Town, NG19
                 </span>
               </li>
               
