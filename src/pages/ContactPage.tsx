@@ -259,8 +259,8 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-medium text-lg">Location</h3>
                       <p className="text-gray-700">
-                        Topaz Grove<br />
-                        Mansfield, NG18 4XE
+                        Little Hollies<br />
+                        Forest Town, NG19 0EB
                       </p>
                     </div>
                   </li>
